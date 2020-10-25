@@ -1,7 +1,7 @@
 {
     "devDependencies": {
         "@symfony/webpack-encore": "^0.30.0",
-        "bootstrap": "5.0.0-alpha1",
+        "bootstrap": "4.5.3",
         "core-js": "^3.0.0",
         "font-awesome": "^4.7.0",
         "node-sass": "4.14.1",
@@ -17,5 +17,8 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "jquery": "3.5.1"
     }
 }
