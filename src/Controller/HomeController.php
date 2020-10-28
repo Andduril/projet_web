@@ -13,6 +13,19 @@ class HomeController extends AbstractController
      */
     public function home(): Response
     {
-        return $this->render('home/home.html.twig');
+        $ua = $_SERVER['HTTP_USER_AGENT'];
+        $onglet = "Home";
+        $systeme = "error";
+
+        if (stristr($ua,"Win")==TRUE){
+            $systeme="Windows";
+        }elseif(stristr($ua,"Linux")==TRUE){
+            $systeme="Linux";
+        }
+
+        return $this->render('home/home.html.twig',[
+            'onglet' => $onglet,
+            'systeme' => $systeme,
+        ]);
     }
 }
